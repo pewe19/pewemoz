@@ -31,7 +31,7 @@ def banner():
           |_|   \___| \_/\_/ \___|_|  |_|\___/___|
                                                                         
                                                                         
-    """ + CYAN + str(res) + "\n" + YELLOW + "\n" + "\n" + "Created By" + "\n" + "\n" + WHITE + str(ngitul) + "\n" + "\n" + OFF)
+    """ + CYAN + str(res) + "\n" + YELLOW + "\n" + "\n" + "✨ Who Create This?" + "\n" + "\n" + WHITE + str(ngitul) + "\n" + "\n" + OFF)
 
     print(intro)
 banner()
