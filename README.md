@@ -14,7 +14,7 @@
 Cek DA, PA, dan Total backlink pakai api MOZ -- dengan API milik Anda sendiri ya..
 
 ### PeweMoz
-is a simple program that grabs **Domain Authority a.k.a DA, Page Authority a.k.a PA & Spam Score** data from the Mozscape API.
+Program sederhana untuk cek cepat **Domain Authority (DA), Page Authority (PA) & Spam Score (SS)** data dari API Mozscape.
 <h4 align="center">Butuh Python ≥ 3.2.</h4>
 
 # 
