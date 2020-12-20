@@ -1,5 +1,5 @@
 <h1 align="center">PeweMoz</h1>
-<h3 align="center">DA, PA & Backlink Checker</h3>
+<h3 align="center">DA, PA & SS Checker</h3>
 
 <div align="center">
 
