@@ -50,7 +50,7 @@ python3 main.py ##eksekusi
 ```
 Screenshoot:
 <p align="center">
-<img src="https://github.com/pewe19/pewemoz/blob/main/1.PNG" /></a>
+<img src="https://github.com/pewe19/pewemoz/blob/main/pewemoz%20capture.PNG" /></a>
 </p>
 
 ## Gak punya program Python?
