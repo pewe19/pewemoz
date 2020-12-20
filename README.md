@@ -52,6 +52,11 @@ edit file url.txt ##isi dengan url yang kamu inginkan
 ```bash
 python3 main.py ##eksekusi
 ```
+
+## Gak punya program Python?
+#### Gunakan Google Cloud Shell Editor Kamu untuk menjalankan script ini.. 
+#### Untuk mendapatkan MOZ API, silakan gugling. Yang bahas udah banyak..❗️
+
 ## License
 
 MIT  © [pewe19](https://github.com/pewe19)
