@@ -41,13 +41,16 @@ git clone http://github.com/pewe19/pewemoz
 cd pewemoz
 ```
 ```bash
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt ##instal data yang dibutuhkan
 ```
 ```bash
-python3 api.py
+python3 inputAPI.py ##masukkan API MOZ Anda
 ```
 ```bash
 edit file url.txt ##isi dengan url yang kamu inginkan
+```
+```bash
+python3 main.py ##eksekusi
 ```
 ## License
 
