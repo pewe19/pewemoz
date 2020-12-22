@@ -34,3 +34,5 @@ elif answer == "tidak":
     print("oke gak jadi ye..")
 else: 
     print("Inputnya ya atau tidak, jangan yang lain.")
+    
+#EOF reset.py PeweMoz V.1.1
