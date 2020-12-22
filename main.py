@@ -13,8 +13,8 @@ from os import path
 def banner():
     bname = [80, 101, 119, 101, 77, 111, 122]
     res = ''.join(map(chr, bname))
-    gitul = [119, 119, 119, 46, 112, 101, 45, 119, 101, 46, 99, 111, 109]
-    ngitul = ''.join(map(chr, gitul))
+    pmoz = [119, 119, 119, 46, 112, 101, 45, 119, 101, 46, 99, 111, 109]
+    pwmoz = ''.join(map(chr, pmoz))
 
     RED = "\033[0;31m"
     BLUE = "\033[0;34m"
@@ -31,7 +31,7 @@ def banner():
           |_|   \___| \_/\_/ \___|_|  |_|\___/___|
                                                                         
                                                                         
-    """ + CYAN + str(res) + "\n" + YELLOW + "\n" + "\n" + "✨ Who Create This?" + "\n" + "\n" + WHITE + str(ngitul) + "\n" + "\n" + OFF)
+    """ + CYAN + str(res) + "\n" + YELLOW + "\n" + "\n" + "✨ Who Create This?" + "\n" + "\n" + WHITE + str(pwmoz) + "\n" + "\n" + OFF)
 
     print(intro)
 banner()
@@ -45,7 +45,7 @@ global filename
 filename = ""
 
 axha = len(open('urls.txt', 'r').readlines())
-##adding headers to csv
+##bikin file dari input txt ke csv
 head = ['Domain Name', 'DA', 'PA', 'Spam Score']
 filename = datetime.now().strftime("%d/%m/%Y %H:%M")
 filename = filename.replace(" ", "_")
@@ -54,11 +54,11 @@ with open(filename + ".csv", "a") as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(head)
     csvfile.close()
-##done adding headers
+##done bikin file
 
 def clean_url():
     x = open("urls.txt")
-    y = x.read()  ##regexto do this ^(https://)|(http://)|(www.)
+    y = x.read()  ##ngilangin ^(https://)|(http://)|(www.)
     z = y.replace("https://", "")
     z = z.replace("http://", "")
     z = z.replace("www.", "")
@@ -131,13 +131,13 @@ def req_loop(finbauth, urlarray, urlbunch, count, leftover):
             #print("mod" +str(modurlarray))
             send_req(finbauth, modurlarray, urllistlen)
 
-        ######request for leftover
+        ######request
 
         for i in range(0, 1):
             leftoverurlarray = urlarray[-int(leftover):]            
             tempvar = len(leftoverurlarray) - 1
-            leftoverurlarray.pop(tempvar - 1) #remove last empty index
-            #print("leftover "+str(leftoverurlarray))
+            leftoverurlarray.pop(tempvar - 1) #apus sedikit biar joss
+            #edit dulu print("leftover "+str(leftoverurlarray))
             send_leftreq(finbauth, leftoverurlarray, tempvar)
             
 
@@ -162,7 +162,7 @@ def send_leftreq(finbauth, urlarray, urllistlen):
         x = json.loads(r.content)
     except JSONDecodeError:
         print("Error : " + str(x['name']))
-    ###for le
+    ###ordinary
     count = urllistlen
     leftparse(x, count)
 
@@ -178,18 +178,18 @@ def leftparse(x, count):
             try:
                 if x['message'] == (("Your monthly row limit reached. To increase your monthly request limit, see: http://moz.com/products/api/pricing") and ("This request exceeds the limit allowed by your current plan. To increase your request limit, see: http://moz.com/products/api/pricing")):
                     print("API-nya Limit Woiii")
-                    #use next api
+                    #coba tes api
             except:
                 break
         try:
-            da = x['results'][b]['domain_authority'] #domain_authority
+            da = x['results'][b]['domain_authority'] #DA domain_authority
         except(IndexError, KeyError):
             break            
         try:
-            pa = x['results'][b]['page_authority'] #page_authority
+            pa = x['results'][b]['page_authority'] #PA page_authority
         except(IndexError, KeyError):
             break
-        spamscore = x['results'][b]['spam_score'] #spam_score
+        spamscore = x['results'][b]['spam_score'] #SS spam_score
         m += 1
         csv_input(domain, da, pa, spamscore)
 
@@ -213,7 +213,7 @@ def send_req(finbauth, urlarray, urllistlen):
     except JSONDecodeError:
         print("Error : " + str(x['name']))
         print("Error!!!! Try adding new API or wait for some time.")
-    ###for le
+    ###ordinary
     count = urllistlen
     jsonparse(x, count)
     
@@ -228,7 +228,7 @@ def jsonparse(x, count):
             try:
                 if x['message'] == (("Your monthly row limit reached. To increase your monthly request limit, see: http://moz.com/products/api/pricing") and ("This request exceeds the limit allowed by your current plan. To increase your request limit, see: http://moz.com/products/api/pricing")):
                     print("API-nya Limit Woiii")
-                    #use next api
+                    #tes cek api
             except:
                 pass                
         try:
@@ -284,4 +284,4 @@ else:
     print("Error mas/mbak bro! Coba cek API atau file url nya.")
 
 
-# Pewemoz V.1.1
+#EOF Pewemoz V.1.1
