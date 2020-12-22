@@ -26,6 +26,7 @@ try:
             f.close()
     print("Berhasil menambahkan API keys ke dalam list." + "\n" + "\n" + uid + "\n" + "\n"+ passwd + "\n")
 except FileNotFoundError:
-    print("Error encountered! Please check if config.json file exists.")
+    print("Error mas/mbak bro! cek coba di folder ada file config.json ndak? ")
 
 
+#EOF inputAPI.py PeweMoz V.1.1
