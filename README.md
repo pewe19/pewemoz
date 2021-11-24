@@ -25,7 +25,7 @@ Program sederhana untuk cek cepat **Domain Authority (DA), Page Authority (PA) &
 - [x] Cepat (Bisa sekaligus cek 1000 URL dalam waktu 15 detik)
 - [x] Mudah digunakan
 - [x] 100% Hasil yang memuaskan
-- [x] 100% Error Free
+- [ ] 100% Error Free
 #### Requirements
 - Requests
 - Config
